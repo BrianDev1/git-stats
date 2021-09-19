@@ -1,7 +1,10 @@
-import express from "express";
+import { Request, Response } from "express";
 
-const router = express.Router();
+interface RouteConfig {
+  req: Request;
+  res: Response;
+}
 
-export const search = router.get("/search", (req, res, next) => {
-  res.status(201).json({ message: "Hey", body: "Bingo" });
-});
+export const search = (props: RouteConfig) => {
+  props.res.status(201).json({ message: "Hey", body: "Bingo" });
+};

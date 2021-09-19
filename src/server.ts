@@ -1,6 +1,8 @@
 import * as http from "http";
 import express, { Express } from "express";
 import bodyParser from "body-parser";
+import { search } from "./routes/main";
+import { Get } from "./utils/decorators";
 
 export class Server {
   private _app: Express;
@@ -34,6 +36,11 @@ export class Server {
       );
       next();
     });
+  }
+
+  @Get("/search")
+  public search() {
+    this._app.use(search);
   }
 
   public start() {
