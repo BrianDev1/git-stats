@@ -1,7 +1,7 @@
 import * as http from "http";
 import express, { Express } from "express";
 import bodyParser from "body-parser";
-import { search } from "./routes/main";
+import { search } from "./controller/search";
 import { Get } from "./utils/decorators";
 
 export class Server {
@@ -38,6 +38,7 @@ export class Server {
     });
   }
 
+  // Server Routes
   @Get("/search")
   public search() {
     this._app.use(search);
