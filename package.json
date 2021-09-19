@@ -1,0 +1,26 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "backend for git status app",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "tsc && node dist/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrianDev1/git-stats.git"
+  },
+  "author": "Brian Rudolph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrianDev1/git-stats/issues"
+  },
+  "homepage": "https://github.com/BrianDev1/git-stats#readme",
+  "devDependencies": {
+    "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
