@@ -1,11 +1,7 @@
-import express from "express";
 import { search } from "./routes/main";
-const app = express();
-const port = 3004;
+import { Server } from "./server";
 
-app.use("/git", search);
+const server = new Server();
 
-app.listen(port, () => {
-  return console.log(`Server started on port ${port}`);
-});
-//
+server.start();
+// app.use("/git", search);
